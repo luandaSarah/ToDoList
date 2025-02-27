@@ -1,0 +1,163 @@
+:root {
+    --grayLine : #a9a9a9;
+    --bgColor : #e6e4c9;
+    --blue: #ABCAF3;
+    --yellow: #ECE779;  
+    --red: #F3A9A9;
+    --green: #A9F3A9;
+}
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 5rem;
+    background-color: var(--bgColor);
+    /* background-size: 20px 20px;
+    background-image: linear-gradient(var(--grayLine) 1px, transparent 0px); */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: solid 2px black;
+    border-radius: 5px;
+    min-width: 20%;
+    min-height: 40%; 
+    box-shadow: 5px 5px black;
+    padding: 2rem 1rem; ;
+    background-color: var(--yellow);
+}
+
+ul {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    min-width: 70%;
+    
+}
+
+/* Style basique pour la liste et les boutons */
+.task-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid black;
+
+}
+
+li {
+    margin: 1rem ;
+  list-style: none;
+  flex: 1;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+
+
+.delete-btn {
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: all 0.5s ease;
+}
+.delete-btn:hover {
+  color: var(--red);
+}
+
+.modify-btn {
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.modify-btn:hover {
+  color: var(--blue);
+}
+.checked {
+    text-decoration: line-through;
+}
+
+.modify-input {
+    border: none;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.modify-input:focus {
+    outline: none; 
+
+}
+
+.validate-btn {
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-left: 2rem;
+}
+.validate-btn:hover {
+    color: var(--green);
+}
+
+#taskInput {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: transparent;
+}
+button {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 0.5rem;
+    cursor: pointer;
+    box-shadow: 2px 2px black;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    box-shadow: none;
+    
+}
+
+#addTaskBtn {
+    background-color: var(--yellow);
+}
+
+#save-btn {
+    background-color: var(--blue);
+}
