@@ -161,3 +161,16 @@ button:hover {
 #save-btn {
     background-color: var(--blue);
 }
+
+.progress-bar {
+    width: 20%;
+    height: 10%;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+.progress {
+    background-color: var(--green);
+    height: 100%;
+    width: 0%;
+}

@@ -5,6 +5,9 @@ const button = document.querySelector("#addTaskBtn");
 const list = document.querySelector("ul");
 const saveBtn = document.querySelector("#save-btn");
 const main = document.querySelector("main");
+const progressBar = document.querySelector(".progress-bar");
+const progress = document.querySelector(".progress");
+let progressWidth = 0;
 
 function handleModifyBtn(btn, taskContainer = null) {
   btn.addEventListener("click", (e) => {
@@ -119,9 +122,19 @@ list.addEventListener("click", (e) => {
   toCheck.forEach((task) => {
     if (task == e.target) {
       task.classList.toggle("checked");
+      handleProgressBar();
+
     }
     if (task.classList.contains("checked")) {
       list.appendChild(task.closest("div"));
     }
   });
 });
+
+function handleProgressBar() {
+  const tasks = document.querySelectorAll("li");
+  const checkedTasks = document.querySelectorAll(".checked");
+  console.log(checkedTasks.length);
+  progressWidth = (checkedTasks.length / tasks.length) * 100;
+  progress.style.width = `${progressWidth}%`;
+}
